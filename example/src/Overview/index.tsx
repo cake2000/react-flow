@@ -47,7 +47,38 @@ const onEdgeMouseMove = (_: MouseEvent, edge: Edge) => console.log('edge mouse m
 const onEdgeMouseLeave = (_: MouseEvent, edge: Edge) => console.log('edge mouse leave', edge);
 const onEdgeDoubleClick = (_: MouseEvent, edge: Edge) => console.log('edge double click', edge);
 
+
+const nodes = [];
+
+
 const initialElements: Elements = [
+  {
+    id: '1',
+    type: 'input',
+    data: {
+      label: (
+        <>
+          Welcome to <strong>Test</strong>
+        </>
+      ),
+    },
+    position: { x: 250, y: 250 },
+  },
+  {
+    id: '2',
+    data: {
+      label: (
+        <>
+          This is a <strong>default node</strong>
+        </>
+      ),
+    },
+    position: { x: 0, y: 0 },
+  },
+];
+
+// eslint-disable-next-line
+const initialElementsOld: Elements = [
   {
     id: '1',
     type: 'input',
